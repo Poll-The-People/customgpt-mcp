@@ -1,0 +1,151 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables (SENSITIVE)
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# API Keys and Secrets (SENSITIVE)
+*api_key*
+*secret*
+*token*
+*password*
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+analytics.db
+cache.db
+
+# Logs
+*.log
+logs/
+server.log
+mcp.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project Specific
+# Sensitive configuration files
+claude_desktop_config.json
+.mcp.json
+mcp_servers.json
+
+# Claude Code files (user-specific instructions)
+CLAUDE.md
+CLAUDE_CODE_SETUP.md
+claude_code_config.json
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Backup files
+*.bak
+*.backup
+*_backup_*
+
+# Cache directories
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# Documentation build
+docs/_build/
+site/
+
+# Package files
+*.tar.gz
+*.zip
+
+# Railway deployment
+.railway/
+
+# Vercel deployment
+.vercel/
+
+# Docker
+.dockerignore
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# Test files
+test_*.py
+*_test.py
+tests/
+
+# Example files that might contain sensitive data
+*example*
+*sample*
+*demo*
+
+# Runtime files
+*.pid
+*.sock

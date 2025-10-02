@@ -1,0 +1,2 @@
+customgpt-client
+mcp[cli]

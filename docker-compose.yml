@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  customgpt-mcp-server:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - CUSTOMGPT_API_BASE=https://app.customgpt.ai
+      - DEBUG=false
+      - CORS_ORIGINS=https://claude.ai,https://chatgpt.com
+    volumes:
+      - ./docs:/app/docs:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  default:
+    name: customgpt-mcp-network

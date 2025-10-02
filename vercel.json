@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "server.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "routes": [
+    {
+      "src": "/mcp",
+      "dest": "/server.py"
+    },
+    {
+      "src": "/health",
+      "dest": "/server.py"
+    }
+  ],
+  "env": {
+    "CUSTOMGPT_API_BASE": "https://app.customgpt.ai",
+    "PYTHONPATH": "."
+  }
+}
