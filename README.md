@@ -1,39 +1,37 @@
-# CustomGPT MCP Server 🤖
+# CustomGPT MCP Server
 
-A **full-featured** Model Context Protocol (MCP) server built with **FastMCP** that provides seamless access to CustomGPT.ai APIs. Interact with your CustomGPT agents directly through Claude Code, Claude Web, and any MCP-compatible client.
+A **full-featured** Model Context Protocol (MCP) server that provides seamless access to CustomGPT.ai APIs. Interact with your CustomGPT agents directly through Claude Code, Claude Web, and any MCP-compatible client.
 
-## ✨ **Built with FastMCP 2.0** - The fastest way to build MCP servers!
+## Features
 
-## 🌟 Features
-
-### 🤖 Agent Management
+### Agent Management
 - **List Agents**: Browse all your CustomGPT agents with pagination
 - **Get Agent Details**: Retrieve detailed information about specific agents
 - **Create Agents**: Create new agents from sitemaps or files
 - **Agent Statistics**: Get usage stats, page counts, and conversation metrics
 - **Agent Settings**: View and configure agent behavior and appearance
 
-### 💬 Conversation Management
+### Conversation Management
 - **Send Messages**: Chat with your agents using OpenAI-compatible format
 - **List Conversations**: Browse conversation history for any agent
 - **Message History**: Retrieve full conversation transcripts
 
-### 📄 Content Management
+### Content Management
 - **List Pages**: View all pages/sources for your agents
 - **Page Status**: Check crawl and indexing status
 - **Content Sources**: Manage sitemaps and uploaded files
 
-### 📚 API Documentation Integration
+### API Documentation Integration
 - **Search Documentation**: Find relevant API endpoints and documentation
 - **Endpoint Details**: Get comprehensive information about specific API endpoints
 - **Interactive Help**: Built-in API reference with examples
 
-### 🔐 Security & Privacy
+### Security & Privacy
 - **API Key Masking**: Secure API key handling with automatic masking in logs
 - **Validation**: Built-in API key validation and format checking
 - **No Storage**: Stateless design - API keys are never stored permanently
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Python 3.10+** (required for FastMCP)
@@ -45,8 +43,8 @@ A **full-featured** Model Context Protocol (MCP) server built with **FastMCP** t
 #### **Recommended Setup**
 ```bash
 # Clone repository
-git clone https://github.com/customgpt-ai/customgpt-mcp-server.git
-cd customgpt-mcp-server
+git clone https://github.com/Poll-The-People/customgpt-mcp.git
+cd customgpt-mcp
 
 # Create Python 3.11 virtual environment (required for FastMCP)
 python3.11 -m venv venv
@@ -65,8 +63,8 @@ python server.py
 
 #### Option 2: Using Docker
 ```bash
-git clone https://github.com/customgpt-ai/customgpt-mcp-server.git
-cd customgpt-mcp-server
+git clone https://github.com/customgpt-ai/customgpt-mcp.git
+cd customgpt-mcp
 docker-compose up -d
 ```
 
@@ -80,8 +78,8 @@ docker-compose up -d
 ### Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/customgpt-ai/customgpt-mcp-server.git
-cd customgpt-mcp-server
+git clone https://github.com/customgpt-ai/customgpt-mcp.git
+cd customgpt-mcp
 
 # Create virtual environment
 python -m venv venv
@@ -130,9 +128,9 @@ Add to your MCP settings:
   "mcpServers": {
     "customgpt": {
       "command": "python",
-      "args": ["/path/to/customgpt-mcp-server/server.py"],
+      "args": ["/path/to/customgpt-mcp/server.py"],
       "env": {
-        "PYTHONPATH": "/path/to/customgpt-mcp-server"
+        "PYTHONPATH": "/path/to/customgpt-mcp"
       }
     }
   }
@@ -342,8 +340,8 @@ For containerized deployment on any platform.
 docker-compose up -d
 
 # Or build manually
-docker build -t customgpt-mcp-server .
-docker run -p 8000:8000 -e CUSTOMGPT_API_BASE=https://app.customgpt.ai customgpt-mcp-server
+docker build -t customgpt-mcp .
+docker run -p 8000:8000 -e CUSTOMGPT_API_BASE=https://app.customgpt.ai customgpt-mcp
 ```
 
 ### Self-Hosted
@@ -368,7 +366,7 @@ The server provides comprehensive API documentation integration. Use the followi
 - `get_api_endpoint_details` - Get detailed endpoint information
 - Access the built-in resource: `customgpt://api-documentation`
 
-## 🛡️ Security Considerations
+## Security Considerations
 
 ### API Key Management
 - API keys are masked in all logs (only last 4 characters shown)
@@ -389,7 +387,7 @@ The server provides comprehensive API documentation integration. Use the followi
 4. Monitor logs for unusual activity
 5. Regularly rotate API keys
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -425,15 +423,15 @@ The server provides health check endpoints:
 - `/health` - Basic server health
 - `/api/v1/health` - API health with version info
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Development Setup
 ```bash
 # Clone and setup
-git clone https://github.com/customgpt-ai/customgpt-mcp-server.git
-cd customgpt-mcp-server
+git clone https://github.com/customgpt-ai/customgpt-mcp.git
+cd customgpt-mcp
 
 # Install development dependencies
 pip install -r requirements.txt
@@ -450,37 +448,24 @@ ruff --fix .
 mypy .
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## Support
 
-- **Documentation**: [https://docs.customgpt.ai/mcp](https://docs.customgpt.ai/mcp)
-- **Issues**: [GitHub Issues](https://github.com/customgpt-ai/customgpt-mcp-server/issues)
+- **Documentation**: [https://docs.customgpt.ai/mcp](https://docs.customgpt.ai/)
 - **Email**: [hello@customgpt.ai](mailto:hello@customgpt.ai)
-- **Discord**: [Join our community](https://discord.gg/customgpt)
+- **Slack**: [Join our community](https://customgpt.ai/slack)
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] **Streaming Support**: Real-time message streaming
 - [ ] **File Upload**: Direct file upload to agents
-- [ ] **Advanced Analytics**: Detailed usage analytics and reporting
 - [ ] **Webhook Integration**: Real-time notifications and events
 - [ ] **Multi-tenancy**: Support for multiple organizations
 - [ ] **Rate Limiting**: Built-in rate limiting and quota management
 - [ ] **Caching**: Intelligent response caching for better performance
 
-## 🙏 Acknowledgments
 
-- [Model Context Protocol](https://github.com/modelcontextprotocol/servers) team
-- [CustomGPT.ai](https://customgpt.ai) for the amazing API
-- All contributors and users of this project
-
----
-
-**Made with ❤️ by the CustomGPT.ai team**
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/your-template-id)
-[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/customgpt/mcp-server)
-[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org)
+*this is still in beta.
