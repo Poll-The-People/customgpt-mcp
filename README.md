@@ -2,6 +2,10 @@
 
 A **full-featured** Model Context Protocol (MCP) server that provides seamless access to CustomGPT.ai APIs. Interact with your CustomGPT agents directly through Claude Code, Claude Web, and any MCP-compatible client.
 
+## Hosted deployment
+
+A hosted deployment is available on [Fronteir AI](https://fronteir.ai/mcp/poll-the-people-customgpt-mcp).
+
 ## Features
 
 ### Agent Management
